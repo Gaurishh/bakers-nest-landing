@@ -1,21 +1,17 @@
 {
   "files": {
-    "main.css": "/bakers-nest/static/css/main.8ea2cc5a.css",
-    "main.js": "/bakers-nest/static/js/main.31de62e8.js",
-    "static/media/home-banner-image.png": "/bakers-nest/static/media/home-banner-image.a41849b23e5c36d66717.png",
+    "main.css": "/bakers-nest/static/css/main.b149e306.css",
+    "main.js": "/bakers-nest/static/js/main.a9afc31d.js",
     "static/media/home-banner-image2.jpg": "/bakers-nest/static/media/home-banner-image2.6ba19ca33c536867a63d.jpg",
     "static/media/about-background-image2.jpg": "/bakers-nest/static/media/about-background-image2.a95e437b26690fa828b1.jpg",
     "static/media/Logo4.jpg": "/bakers-nest/static/media/Logo4.8348810f163466953151.jpg",
-    "static/media/Logo3.svg": "/bakers-nest/static/media/Logo3.761d873434f397db6b46ad159ebf3037.svg",
-    "static/media/Logo2.svg": "/bakers-nest/static/media/Logo2.5d658c542d9044b9d9baf1e0c9cf4776.svg",
     "static/media/home-banner-background.png": "/bakers-nest/static/media/home-banner-background.9aa6d35a56c1c46eac5b.png",
-    "static/media/Logo.svg": "/bakers-nest/static/media/Logo.e04f4319ea0059a833b1ca8d03810b60.svg",
     "index.html": "/bakers-nest/index.html",
-    "main.8ea2cc5a.css.map": "/bakers-nest/static/css/main.8ea2cc5a.css.map",
-    "main.31de62e8.js.map": "/bakers-nest/static/js/main.31de62e8.js.map"
+    "main.b149e306.css.map": "/bakers-nest/static/css/main.b149e306.css.map",
+    "main.a9afc31d.js.map": "/bakers-nest/static/js/main.a9afc31d.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ea2cc5a.css",
-    "static/js/main.31de62e8.js"
+    "static/css/main.b149e306.css",
+    "static/js/main.a9afc31d.js"
   ]
 }

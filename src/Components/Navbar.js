@@ -21,25 +21,28 @@ const Navbar = (props) => {
   const [openMenu, setOpenMenu] = useState(false) 
   // this variable is used for opening and closing the menu drawer (used for implementing the navbar in mobile devices)
 
-  const menuOptions = [
-    {
-      text: "Home",
-      icon: <HomeIcon />
-    },
-    {
-      text: "About",
-      icon: <InfoIcon />
-    },
-    {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />
-    }
-  ]
-
   const scrollFunction = (elementRef) => {
     window.scrollTo({top: elementRef.current.offsetTop, behavior: 'smooth'});
     // event.preventDefault();
   }
+
+  const menuOptions = [
+    {
+      text: "Home",
+      icon: <HomeIcon />,
+      fnctn: (e) => {scrollFunction(props.home); e.preventDefault()}
+    },
+    {
+      text: "About",
+      icon: <InfoIcon />,
+      fnctn: (e) => {scrollFunction(props.about); e.preventDefault()}
+    },
+    {
+      text: "Contact",
+      icon: <PhoneRoundedIcon />,
+      fnctn: (e) => {scrollFunction(props.contact); e.preventDefault()}
+    }
+  ]
 
   return (
   <nav> {/* contains different components of navbar */}
@@ -63,7 +66,7 @@ const Navbar = (props) => {
         <List>
           {menuOptions.map((item) => (
             <ListItem key={item.text} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={item.fnctn}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.text} />
               </ListItemButton>

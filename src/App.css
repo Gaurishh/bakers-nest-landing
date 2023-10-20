@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
 }
+#removed a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -76,6 +81,54 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
+
+.primary-button svg {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.contact-button{
+  margin-left: 1rem;
+  padding: 1rem 3rem;
+  /* background-color: #ff3030; */
+  background-color: #ff3030;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-button {
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  /* background-color: #ff3030; */
+  background-color: #25d366;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondary-button svg { 
+  margin-left: 0.75rem;
+  font-size: 2rem;
+}
+.secondary-button:hover {
+  background-color: #25d366;
+}
 .navbar-cart-icon {
   font-size: 1.15rem;
 }
@@ -110,7 +163,7 @@ nav {
   align-items: flex-start;
 }
 .primary-heading {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 4rem);
   color: #4c4c4c;
   /* line-height: 5rem; */
   max-width: 600px;
@@ -120,28 +173,6 @@ nav {
   max-width: 500px;
   color: #6a6a6a;
   margin: 1.5rem 0rem;
-}
-.secondary-button {
-  padding: 1rem 2.5rem;
-  background-color: #ff3030;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  color: white;
-  transition: 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.secondary-button svg {
-  margin-left: 0.75rem;
-  font-size: 1.5rem;
-}
-.secondary-button:hover {
-  background-color: #e48f0f;
 }
 .about-section-container {
   margin-top: 20rem;
@@ -204,8 +235,8 @@ nav {
   margin: 6rem 0rem;
 }
 .contact-form-container {
-  background-color: white;
-  max-width: 700px;
+  background-color: #f6f6f6;
+  max-width: 400px;
   width: 100%;
   margin-top: 3rem;
   display: flex;
@@ -224,16 +255,21 @@ nav {
 .footer-wrapper {
   margin: 6rem 0rem;
   display: flex;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .footer-logo-container {
   max-width: 110px;
+  margin-right: 5rem;
+}
+.footer-logo-container svg {
+  margin-top: 2.5rem;
+  font-size: 3rem;
 }
 .footer-icons {
   margin-top: 2.5rem;
 }
 .footer-icons svg {
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin-right: 1.25rem;
   color: #585858;
 }

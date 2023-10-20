@@ -1,14 +1,10 @@
 import React, { useState } from 'react'
-import Logo from "../Assets/Logo.svg"
-import Logo2 from "../Assets/Logo2.svg"
-import Logo3 from "../Assets/Logo3.svg"
 import Logo4 from "../Assets/Logo4.jpg"
 import { BsCart2 } from "react-icons/bs";
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -18,11 +14,13 @@ import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import { WhatsApp } from '@mui/icons-material';
+import { FiArrowRight } from 'react-icons/fi';
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [openMenu, setOpenMenu] = useState(false) 
   // this variable is used for opening and closing the menu drawer (used for implementing the navbar in mobile devices)
-  
+
   const menuOptions = [
     {
       text: "Home",
@@ -33,19 +31,16 @@ const Navbar = () => {
       icon: <InfoIcon />
     },
     {
-      text: "Testimonials",
-      icon: <CommentRoundedIcon />
-    },
-    {
       text: "Contact",
       icon: <PhoneRoundedIcon />
-    },
-    {
-      text: "Cart",
-      icon: <ShoppingCartRoundedIcon />
-    },
+    }
   ]
-  
+
+  const scrollFunction = (elementRef) => {
+    window.scrollTo({top: elementRef.current.offsetTop, behavior: 'smooth'});
+    // event.preventDefault();
+  }
+
   return (
   <nav> {/* contains different components of navbar */}
     <div className='nav-logo-container'> {/* logo of the navbar */}
@@ -53,16 +48,10 @@ const Navbar = () => {
     </div>
 
     <div className='navbar-links-container'> {/* links of navbar */}
-
-      <a href=''>Home</a>
-      <a href=''>About</a>
-      <a href=''>Testimonials</a>
-      <a href=''>Contact</a>
-      <a href=''>
-        <BsCart2 className='navbar-cart-icon'/>
-      </a>
-      <button className='primary-button'>Order now</button>
-      
+      <a href='' onClick={(e) => {scrollFunction(props.home); e.preventDefault()}}>Home</a>
+      <a href='' onClick={(e) => {scrollFunction(props.about); e.preventDefault()}}>About</a>
+      <a href='' onClick={(e) => {scrollFunction(props.contact); e.preventDefault()}}>Contact</a>
+      <button className='primary-button' id='removed'><a href="https://wa.me/c/918595714343" target="_blank" style={{marginRight: 0}}>Order now</a></button>
     </div>
 
     <div className='navbar-menu-container'> {/* the menu button in the navbar, accessible only for small screens */}
@@ -80,6 +69,12 @@ const Navbar = () => {
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem key="Order now" disablePadding style={{marginTop: '1rem'}}>
+            <ListItemButton id='removed' >
+            <ListItemIcon><FiArrowRight /></ListItemIcon>
+              <a href="https://wa.me/c/918595714343" target="_blank" >Order now</a> 
+            </ListItemButton>
+          </ListItem>
         </List>
       </Box>
     </Drawer>
